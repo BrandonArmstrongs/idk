@@ -1,0 +1,209 @@
+ <HTML>
+
+<Head>
+
+<title>hi</title>
+
+<style>
+    body {overflow-x:hidden}
+.test {width:50px; height:50px; border: 5px solid black}
+.slider {cursor:grab;}
+.slider:active {cursor:grabbing; }
+.offline {width:18%;height:12%; position:absolute; right: 2%;bottom:3%;border: 5px solid black;font-size: 40px;text-align: center;border-radius: 1rem;}
+.offlineb{font-size:small;position: absolute;padding: 3px;left:0;bottom:0; text-align:left;}
+.increasebutton{border-radius: 0.5rem; width:50px; position: absolute; left:30%}
+/* stikcy*/
+.horizontalline{position: sticky;left:0%;top:15%;width:100%;height:0px;border:5px solid black}
+.verticalline{position: sticky;left:20%;top:15%;width:0px;height:708px;border:5px solid black}
+
+.stickies {position:absolute; height: 100%; width: 100%;left:0%;top: 0%;}
+</style>
+
+</Head>
+
+<body>
+    <!--STICKIES-->
+    <div class="stickies">
+        <!--ADD BELOW PLS-->
+        <div class="horizontalline"></div>
+        <div class="verticalline"></div>
+        <!-- END STICKIES -->
+    </div>
+    <!--LITERAL END STICKIES-->
+<div class="test" id="display">placeholder</div>
+<button class="increasebutton" id="+1">Gain 1</button>
+<button id="reset">reset</button>
+<input 
+type="range" 
+id="e"
+min="0"
+max="10"
+value="5"
+label="idk"
+class="slider"
+step="0.01"
+>
+
+<script>
+    const avgmnth = 30.436875
+    let wasgoneforgoodtime = 0
+let j=0
+let saves=0
+let savem=0
+let saved=0
+let saveh=0
+let savems=0
+let progpercent=-2000
+let movedanim=1200
+    let displayit=0
+    let secs=0
+    let ms=0
+    let mins=0
+    let hrs=0
+    let dys=0
+    let mnths=0
+    let yrs=0
+    let displaytest=0
+    let thistime=0
+    let b=0
+    let c=0
+    let g=0
+    let i=0
+    let funny=0
+    const d= localStorage.getItem('clicks');
+        const timmy= localStorage.getItem('milliseconds');
+
+    const f=localStorage.getItem('slidervalue')
+            let test = 0;
+            let increaseps=1
+            let addidk=0;
+            let a=0;
+            const reset = document.getElementById('reset');
+
+const add1 = document.getElementById('+1');
+const idk = document.getElementById('display');
+const thisthingy = document.getElementById('e');
+const since = document.getElementById('hewwo');
+let addingb=0
+
+
+
+
+window.onload=function (){
+j=timmy
+g=Date.now()
+i=g-j
+reconstructtime(g,1,j)
+test = d/100
+test+=addingb;
+thisthingy.value=f
+displayandsave(test)}
+
+add1.addEventListener('click',function (){
+    test++
+displayandsave(test)
+})
+reset.addEventListener('click',function(){
+    test=0
+    thisthingy.value=5
+    displayandsave(test)
+})
+setInterval(increaseiter,10)
+setInterval(idkevenknowanymore,1)
+function idkevenknowanymore (){
+    thistime=Date.now()
+//reconstructtime(thistime,1)
+localStorage.setItem('milliseconds',thistime);
+inwardsanim()
+}
+function reconstructtime(time, ty, subtr) {
+    const diff = time - subtr; // ms difference
+
+    let ms = diff % 1000;
+    let totalSecs = Math.floor(diff / 1000);
+    let secs = totalSecs % 60;
+
+    let totalMins = Math.floor(totalSecs / 60);
+    let mins = totalMins % 60;
+
+    let totalHrs = Math.floor(totalMins / 60);
+    let hrs = totalHrs % 24;
+
+    let dys = Math.floor(totalHrs / 24);
+    let diffb=time-subtr
+
+let gain = (diffb)*f/1000
+addingb=Math.floor(gain*100)/100
+saves=secs
+savem=mins
+savems=ms
+saved=dys
+saveh=hrs
+if (diffb>2500) {
+    wasgoneforgoodtime=1
+}
+
+    Newdiv=document.createElement('div')
+        Newnewdiv=document.createElement('div')
+        Newnewdiv.parent
+Newnewdiv.classList.add("offlineb")
+    Newdiv.classList.add("offline")
+movedanim=progpercent
+    Newdiv.style.left=movedanim+'%'
+    Newdiv.innerHTML='Welcome Back!'
+    Newnewdiv.innerHTML = `You gained ${Math.floor(addingb)} things <br> You were gone for ${dys}d, ${hrs}h,  ${mins}m,  ${secs}s `;
+    if (wasgoneforgoodtime===0){Newdiv.style.display='none' 
+    Newnewdiv.style.display='none'
+}
+Newdiv.appendChild(Newnewdiv)
+document.body.appendChild(Newdiv)
+
+}
+function inwardsanim (){
+    if (progpercent<2) {
+        funny=progpercent-2
+        progpercent-=funny/24
+    }
+else{progpercent=2}
+Newdiv.remove()     
+Newnewdiv.remove()       
+
+    Newdiv=document.createElement('div')
+        Newnewdiv=document.createElement('div')
+        Newnewdiv.parent
+Newnewdiv.classList.add("offlineb")
+    Newdiv.classList.add("offline")
+movedanim=progpercent
+    Newdiv.style.right=movedanim+'%'
+    Newdiv.innerHTML='Welcome Back!'
+    Newnewdiv.innerHTML = `You gained ${Math.floor(addingb)} things <br> You were gone for ${saved}d, ${saveh}h,  ${savem}m,  ${saves}s `;
+    if (wasgoneforgoodtime===0){Newdiv.style.display='none' 
+    Newnewdiv.style.display='none'
+}
+Newdiv.appendChild(Newnewdiv)
+document.body.appendChild(Newdiv)
+}
+
+
+function  increaseiter (){
+            localStorage.setItem('slidervalue',thisthingy.value);
+
+    increaseps=thisthingy.value
+    addidk=increaseps/100
+    test+=addidk
+    displayandsave(test)
+}
+function displayandsave (number){
+a=number
+b=Math.floor(a*100)
+c=b
+displaytest=c
+    idk.innerHTML=Math.floor(displaytest/100)
+    localStorage.setItem('clicks',displaytest);
+
+}
+</script>
+
+</body>
+
+</HTML>

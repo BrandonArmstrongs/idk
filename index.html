@@ -70,10 +70,11 @@ let movedanim=1200
     let g=0
     let i=0
     let funny=0
-    const d= localStorage.getItem('clicks');
-        const timmy= localStorage.getItem('milliseconds');
+const d = parseInt(localStorage.getItem('clicks')) || 0;
+const timmy = parseInt(localStorage.getItem('milliseconds')) || Date.now();
+const f = parseFloat(localStorage.getItem('slidervalue')) || 5;
 
-    const f=localStorage.getItem('slidervalue')
+
             let test = 0;
             let increaseps=1
             let addidk=0;
@@ -193,15 +194,27 @@ function  increaseiter (){
     test+=addidk
     displayandsave(test)
 }
-function displayandsave (number){
-a=number
-b=Math.floor(a*100)
-c=b
-displaytest=c
-    idk.innerHTML=Math.floor(displaytest/100)
-    localStorage.setItem('clicks',displaytest);
+function displayandsave(number){
+    a = number;
+    b = Math.floor(a * 100);
+    c = b;
+    displaytest = c;
+    idk.innerHTML = Math.floor(displaytest / 100);
 
+    // Save everything at once
+    localStorage.setItem('clicks', displaytest);
+    localStorage.setItem('slidervalue', thisthingy.value);
+    localStorage.setItem('milliseconds', Date.now());
 }
+window.addEventListener('beforeunload', savedata);
+
+function savedata(){
+        thistime=Date.now()
+
+   localStorage.setItem('clicks', displaytest);
+    localStorage.setItem('slidervalue', thisthingy.value);
+    localStorage.setItem('milliseconds', Date.now());
+    }
 </script>
 
 </body>

@@ -1,47 +1,626 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>S</title>
+    <title>Student Hub</title>
     <style>
-        .temp {
-            position: absolute;
-            left: 45%;
-            top: 45%;
-            transform: translate(-50%, -50%);
-            width: 10%;
-            height: auto;
-            outline: solid 5px black;
-            padding: 10px;
-            box-sizing: border-box;
-            background-color: #f0f0f0;
-            text-align: center;
+        * {box-sizing: border-box;}
+        html, body {
+            height: 100%;
+            margin: 0;
         }
-        #copyButton {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            padding: 8px 12px;
-            font-size: 14px;
-            cursor: pointer;
-            z-index: 1000;
+        .image{
+            display: flex;
+            width: 48px;
+            height:auto;
+            position:sticky;
+            top:1.25%;
+            left:11.45%
         }
+        .g {
+            height: 100%;
+            background-color: rgb(0, 0, 0);
+            width: 100%;
+            display: flex;
+            position:fixed;
+            top:0;
+            z-index: -8;
+            backdrop-filter: blur(25px);
+
+        }
+        .sidebar1 {
+            height:102%;
+            width:15.5%;
+            display:flex;
+            position:fixed;
+            top:-1%;
+            background-color: rgba(0, 0, 0, 0);
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius:1rem;
+            outline:5px solid rgb(59,59,59);
+            z-index: -2;
+        }
+        .container {
+  container-type: inline-size;
+}
+.container p {
+    overflow: hidden;
+            height:6%;
+            width:14%;
+            background-color: rgb(0, 0, 0);
+            display:flex;
+            position:fixed;
+            top:1%;
+            left:0.5%;
+            font-family: "Space Grotesk", sans-serif;
+            border-radius:0.5rem;
+            justify-content:left;
+            align-items:center;
+            padding:0.5%;
+            outline: 5px solid rgb(59, 59, 59);
+            color:white;
+            user-select:none;
+  font-size: 5cqw; /* Font size will be 5% of the container's width */
+}
+
+        .sidebarentry {
+overflow: hidden;
+            height:6%;
+            width:14%;
+            background-color: rgb(0, 0, 0);
+            display:flex;
+            position:fixed;
+            top:1%;
+            left:0.5%;
+            font-family: "Space Grotesk", sans-serif;
+            border-radius:0.5rem;
+            justify-content:left;
+            align-items:center;
+            padding:0.5%;
+            outline: 5px solid rgb(59, 59, 59);
+            color:white;
+            user-select:none;
+
+        
+            
+        }
+        .sidebarentry:hover{background-color: rgb(46, 46, 46);cursor:pointer}
+
+        .sidebarline {
+            height:15%;
+            width:1005.5%;
+            background-color: rgba(0, 0, 0, 0.407);
+            display:flex;
+            position:fixed;
+            top:-6%;
+            border-radius:0.5rem;
+            justify-content:left;
+            align-items:center;
+            outline: 5px solid rgb(59, 59, 59);
+            color:white;
+            z-index: -3;
+            backdrop-filter: blur(5px);
+        
+            
+        }
+                .homeentry {
+            height:35%;
+            width:20%;
+            background-color: rgb(1, 0, 28);
+            display:flex;
+            position:absolute;
+            top:15%;
+            left:23%;
+            border-radius:0.5rem;
+            justify-content:left;
+            align-items:center;
+            padding:0.5%;
+            outline: 5px solid rgb(59,59,59);
+            color:white;z-index: -6;
+            font-family: "Space Grotesk", sans-serif;
+        
+            
+        }
+           .homeentrytopbar {
+            height:16%;
+            width:20%;
+            background-color: rgb(0, 7, 43);
+            display:flex;
+            position:absolute;
+            top:34%;
+            left:23%;
+                        font-family: "Space Grotesk", sans-serif;
+                        margin-bottom: 19px;
+            border-radius:0.5rem;
+            justify-content:center;
+            align-items:center;
+            padding:0.5%;
+            outline: 5px solid rgb(59, 59, 59);
+            color:rgb(0, 191, 255);
+            font-size: 2rem;
+            z-index: -5;
+            
+        
+            
+        }
+         .levelupcover{
+            position:fixed;
+            top:2%;
+            left:15%;
+            height:96%;
+            width:70%;
+            background-color: black;
+            z-index: 10000;
+            outline:8px solid rgb(59, 59, 59);
+            border-radius: 3rem;
+            display: flex;
+
+         }
+         .blurmask {
+            background-color: rgba(0, 0, 0, 0.349);
+            position: fixed;
+            display: flex;
+            left:0%;
+            top:0%;
+            height: 100%;
+            width: 100%;
+            backdrop-filter: blur(25px);
+            z-index: 500;
+         }
+         
+        .image{position:fixed;display:flex;color:white}
+        
     </style>
 </head>
 <body>
-    <button id="copyButton">Copy Text</button>
-    <div class="temp" id="textContainer">
-        ก็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็
-    </div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <div class="g">hi</div>
+    <div class="sidebar1">h</div>
+    <!----
+    <div class="sidebarentry" style="top:11.5%">Home</div>
+    <div class="sidebarentry" style="top:19.5%">Classes</div>
+    <div class="sidebarentry" style="top:27.5%">Assignments</div>
+    <div class="sidebarentry" style="top:35.5%">Grades</div>
+    <div class="sidebarentry" style="top:43.5%">Help</div>
+-->
+    <div class="image" style="z-index: 100001;left:82%;top: 5%;width:48;"><img src="x.png" class="image" id="levelxbutton" style="visibility:hidden;left:82%; width:16px;top:5%;cursor:pointer"></div>
+    <div class="blurmask" id="levelmaskblur" style="visibility: hidden;"></div>
+    <div class="levelupcover" id="levelmask" style="visibility: hidden;"></div>
+    <div class="sidebarentry" style="top:76%">Notifications</div>
+    <div class="sidebarentry"style="top:1.25%" id='username'>Notifications</div>
+        <div id="levelclicker"class="sidebarentry" style="top:1.25%; width:3%; left:11.5%;">
+            <img id="levelImage" src="" alt="Level Image" class="image"><br>
+        </div>
+        <div class="image" style="top:25%">d</div>
+    <div class="sidebarentry" style="top:84%">Support</div>
+    <div class="sidebarentry" style="top:92%">Settings</div>
+    <input class="sidebarentry" style="left:85%;" type="text" id="usernameinput" >g</input>
+    <div class="sidebarentry" style="left:70%;z-index: 100;background-color: rgba(255, 255, 255, 0);" id="answerquestion" >answer question</div>
+        <div class="sidebarentry" style="left:70%;z-index: 1;background-color: rgb(0, 170, 255);border-radius: 0rem;outline:none; overflow: hidden;max-width: 14%;"outline:none></div>
+
+        <div class="sidebarentry" style="left:70%;pointer-events:none;outline: none;z-index: 2;border-radius: 0rem;overflow: hidden;" id="answerquestioncool" ></div>
+
+    <div class="test"></div>
+
+    <div class="sidebarline"></div>
 
     <script>
-        document.getElementById('copyButton').addEventListener('click', function() {
-            const text = document.getElementById('textContainer').innerText;
-            navigator.clipboard.writeText(text).then(function() {
-                alert('Text copied to clipboard!');
-            }).catch(function(err) {
-                alert('Failed to copy text: ' + err);
-            });
+        let level=0
+        let frame=1
+let whatscreenon="Home"
+document.addEventListener('contextmenu',function(){event.preventDefault()})
+let screen=0
+let buttons=0
+let isteacher=0
+let thisname="sigma"
+let coolanim=document.getElementById('answerquestioncool')
+let testtodounjsonified=[
+    {Who:"Who",WorkName:"asked",DateDue:"6/7/67"}
+]
+let levelinfo=[
+    {lname:"Stone",xpreq:"100",xpper:"10"},
+    {lname:"Stone I",xpreq:"200",xpper:"10"},
+    {lname:"Stone II",xpreq:"500",xpper:"10"},
+    {lname:"Bronze",xpreq:"1000",xpper:"25"},
+    {lname:"Bronze I",xpreq:"1500",xpper:"25"},
+    {lname:"Bronze II",xpreq:"2000",xpper:"25"},
+    {lname:"Gold",xpreq:"5000",xpper:"100"},
+    {lname:"Gold I",xpreq:"7500",xpper:"100"},
+    {lname:"Gold II",xpreq:"10000",xpper:"100"},
+    {lname:"Diamond",xpreq:"17500",xpper:"250"},
+    {lname:"Diamond I",xpreq:"25000",xpper:"250"},
+    {lname:"Diamond II",xpreq:"30000",xpper:"250"},
+    {lname:"Emerald",xpreq:"36666",xpper:"500"},
+    {lname:"Emerald I",xpreq:"43332",xpper:"500"},
+    {lname:"Emerald II",xpreq:"50000",xpper:"500"},
+    {lname:"Ruby",xpreq:"70000",xpper:"1000"},
+    {lname:"Ruby I",xpreq:"130000",xpper:"1000"},
+    {lname:"Ruby II",xpreq:"200000",xpper:"1000"},
+    {lname:"Amethyst",xpreq:"300000",xpper:"2500"},
+    {lname:"Amethyst I",xpreq:"500000",xpper:"2500"},
+    {lname:"Amethyst II",xpreq:"750000",xpper:"2500"},
+    {lname:"Uranium",xpreq:"1000000",xpper:"5000"},
+    {lname:"Uranium I",xpreq:"1250000",xpper:"5000"},
+    {lname:"Uranium II",xpreq:"2000000",xpper:"5000"},
+    {lname:"???",xpreq:"5000000",xpper:"10000"},
+    {lname:"It stirs",xpreq:"15000000",xpper:"25000"},
+    {lname:"It wakes",xpreq:"50000000",xpper:"50000"},
+    {lname:"It rises",xpreq:"100000000",xpper:"100000"},
+    {lname:"What have you done.",xpreq:"100000001",xpper:"250000"},
+    {lname:"DefaultTierName",xpreq:"200000000",xpper:"500000"},
+    {lname:"DefaultTierName I",xpreq:"300000000",xpper:"500000"},
+    {lname:"DefaultTierName II",xpreq:"500000000",xpper:"500000"},
+    {lname:"chip",xpreq:"1000000000",xpper:"1000000"},
+    {lname:"splinter",xpreq:"1500000000",xpper:"1000000"},
+    {lname:"shard",xpreq:"2000000000",xpper:"1000000"},
+    {lname:"fracture",xpreq:"2500000000",xpper:"1000000"},
+    {lname:"shatter",xpreq:"3000000000",xpper:"1000000"},
+    {lname:"fragments",xpreq:"5000000000",xpper:"1000000"},
+    {lname:"Bliss",xpreq:"10000000000",xpper:"10000000"},
+    {lname:"Ignorance",xpreq:"999999999999",xpper:"10000000"},
+    {lname:"naneinf",xpreq:"Infinity",xpper:"100000000"},
+]
+let testclassdata=[
+    {name:"ELA",teacher:"Wright"},
+    {name:"Science",teacher:"Logston"},
+    {name:"Social Studies",teacher:"Rose"},
+    {name:"Algebra",teacher:"Connor"}, 
+    {name:"Band",teacher:"Sipe"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+    {name:"Test",teacher:"Test"},
+]
+let upgrades=[
+    {name:"Unlock Shop", requiredid:"false", cost:"999999999999999999999"},
+    {name:"Get The Casino", requiredid:"false", cost:"hell yeah baby its free"}
+
+]
+let yesupgrades=[
+    {name:"Unlock Shop", requiredid:"false", cost:"999999999999999999999", realID:"1"}
+
+]
+let purchasedupgrades=[
+    {name:"Unlock Shop", requiredid:"false", cost:"999999999999999999999", realID:"1"}
+
+]
+let jsonified=JSON.stringify(testtodounjsonified)
+    document.getElementById('usernameinput').value="testname"
+let unjsonified=JSON.parse(jsonified)
+const levelx=document.getElementById('levelxbutton');
+const blurmasklevel=document.getElementById('levelmaskblur');
+const levelpopup=document.getElementById('levelmask');
+const answerquestiontest=document.getElementById('answerquestion');
+
+let xp=0
+const xpgain=levelinfo[level].xpper
+
+answerquestiontest.addEventListener('click',function(){
+
+    xp+=parseInt(xpgain)
+})
+levelx.addEventListener('click',function(){
+levelx.style.visibility="hidden";
+blurmasklevel.style.visibility="hidden";
+levelpopup.style.visibility="hidden";
+
+})
+  // Select the div element
+  const levelClicker = document.getElementById('levelclicker');
+  
+
+  // Add a click event listener
+  levelClicker.addEventListener('click', function() {
+    levelx.style.visibility="visible";
+blurmasklevel.style.visibility="visible";
+levelpopup.style.visibility="visible";
+level+=1    // You can replace the alert with any function you want to run
+  });
+function updateLevelImage() {
+
+    const img = document.getElementById('levelImage');
+    if (img) {
+        // Ensure level is within 1-40
+        let levelNumber = level % 42+1
+        let f = frame % 3
+        f+=1
+if (levelNumber===41){
+img.src="41-"+ f +".png";
+let to=1
+let left=1
+to=Math.random()-0.5
+to=1.25+to
+le=Math.random()-0.5
+le=11.5+le
+    img.style.top=to+"%"
+     img.style.left=le+"%"
+}
+else{
+img.style.top=1.25+"%"
+ img.style.left=11.5+"%"
+        img.src = levelNumber%41 + ".png"; // assumes images named 1.png, 2.png, ..., 40.png
+}
+    }
+}
+// Call this function whenever the level changes
+updateLevelImage();
+renderscreen()
+var temptemp=0
+var temptemptemp=0
+let iter=0
+function renderscreen(){
+    const existingEntries = document.querySelectorAll('.homeentry, .homeentrytopbar');
+    existingEntries.forEach(entry => entry.remove());
+    var temptemp=0
+
+let iter=0
+    if (whatscreenon==="Home"){
+        testclassdata.forEach(element => {
+            temptemp=(iter%3)*25+23
+            temptemptemp=45*Math.floor(iter/3)+17
+
+             let NewDiv=document.createElement("div")
+    NewDiv.textContent=testclassdata[iter].teacher
+    NewDiv.className="homeentry"
+        NewDiv.id="homediv"
+
+    NewDiv.style.left=temptemp+"%"
+        NewDiv.style.top=temptemptemp+"%"
+
+    document.body.appendChild(NewDiv)
+    NewDiv=document.createElement("div")
+    NewDiv.textContent=testclassdata[iter].name
+    NewDiv.id="homediv"
+    NewDiv.className="homeentrytopbar"
+        NewDiv.style.top=(temptemptemp+19)+"%"
+        NewDiv.style.scrollMarginBottom="19%"
+
+    NewDiv.style.left=temptemp+"%"
+    document.body.appendChild(NewDiv)
+    iter++
         });
+   
+
+    }
+    else{
+         upgrades.forEach(element => {
+            temptemp=(iter%3)*25+23
+            temptemptemp=45*Math.floor(iter/3)+17
+
+             let NewDiv=document.createElement("div")
+    NewDiv.innerHTML='<img src="shop.png" style="position:absolute;height:16px"> '+ '<div style="margin-left:12px;">' + element.cost + '</div>'
+    NewDiv.id="homediv"
+    NewDiv.className="homeentry"
+    NewDiv.style.left=temptemp+"%"
+        NewDiv.style.top=temptemptemp+"%"
+
+    document.body.appendChild(NewDiv)
+    NewDiv=document.createElement("div")
+    NewDiv.textContent=upgrades[iter].name
+    NewDiv.id="homediv"
+    NewDiv
+
+    NewDiv.className="homeentrytopbar"
+    NewDiv.style.position="absolute"
+    NewDiv.style.fontFamily='"Space Grotesk", sans-serif'
+        NewDiv.style.top=(temptemptemp+19)+"%"
+
+    NewDiv.style.left=temptemp+"%"
+    document.body.appendChild(NewDiv)
+    iter++
+        });
+   
+    }
+}
+function rendersidebar(){
+            const divToRemove = document.getElementById('sidebar');
+        if (divToRemove) {
+            divToRemove.remove();
+        }
+    if (isteacher===1){
+        let NewDiv=document.createElement("div")
+    NewDiv.innerHTML='<img src="home2.png" class="image" style="top:11.5%;"></img>'+"Home"
+    NewDiv.id="sidebar"
+    NewDiv.className="sidebarentry"
+    NewDiv.style.top="11.5%"
+    document.body.appendChild(NewDiv)
+             NewDiv=document.createElement("div")
+    NewDiv.innerHTML='<img src="class.png" class="image" style="top:19.5%;left:11%"></img>'+"Classes"
+    NewDiv.id="sidebar"
+    NewDiv.className="sidebarentry"
+    NewDiv.style.top="19.5%"
+    document.body.appendChild(NewDiv)
+                 NewDiv=document.createElement("div")
+    NewDiv.innerHTML='<img src="assignment.png" class="image" style="top:27.75%;left:11%"></img>'+"Assignments"
+    NewDiv.id="sidebar"
+    NewDiv.className="sidebarentry"
+    NewDiv.style.top="27.5%"
+    document.body.appendChild(NewDiv)
+                 NewDiv=document.createElement("div")
+    NewDiv.innerHTML='<img src="grades.png" class="image" style="top:35.5%;left:11%"></img>'+"Grades"
+    NewDiv.id="sidebar"
+    NewDiv.className="sidebarentry"
+    NewDiv.style.top="35.5%"
+    document.body.appendChild(NewDiv)
+                 NewDiv=document.createElement("div")
+    NewDiv.innerHTML='<img src="tools.png" class="image" style="top:43.5%;left:11%"></img>'+"Tools"
+    NewDiv.id="sidebar"
+    NewDiv.className="sidebarentry"
+    NewDiv.style.top="43.5%"
+    document.body.appendChild(NewDiv)
+                 NewDiv=document.createElement("div")
+    NewDiv.innerHTML='<img src="help.png" class="image" style="top:51.75%;left:11%"></img>'+"Help"
+    NewDiv.id="sidebar"
+    NewDiv.className="sidebarentry"
+    NewDiv.style.top="51.5%"
+    document.body.appendChild(NewDiv)
+}
+    else{
+            let NewDiv=document.createElement("div")
+    NewDiv.innerHTML='<img src="home2.png" class="image" style="top:11.5%"></img>'+"Home"
+    NewDiv.id="sidebar"
+    NewDiv.className="sidebarentry"
+    NewDiv.style.top="11.5%"
+    document.body.appendChild(NewDiv)
+        NewDiv.addEventListener('click',  function(){
+         whatscreenon="Home"
+         renderscreen()
+    })
+             NewDiv=document.createElement("div")
+    NewDiv.innerHTML='<img src="assignment.png" class="image" style="top:19.5%;left:11%"></img>'+"Assignments"
+    NewDiv.id="sidebar"
+    NewDiv.className="sidebarentry"
+    NewDiv.style.top="19.5%"
+    document.body.appendChild(NewDiv)
+                 NewDiv=document.createElement("div")
+    NewDiv.innerHTML='<img src="grades.png" class="image" style="top:27.75%;left:11%"></img>'+"Grades"
+    NewDiv.id="sidebar"
+    NewDiv.className="sidebarentry"
+    NewDiv.style.top="27.5%"
+    document.body.appendChild(NewDiv)
+                 NewDiv=document.createElement("div")
+    NewDiv.innerHTML='<img src="shop.png" class="image" style="top:35.5%;left:11%"></img>'+"Shop"
+    NewDiv.id="sidebar"
+    NewDiv.className="sidebarentry"
+    NewDiv.style.top="35.5%"
+    NewDiv.addEventListener('click',  function(){
+         whatscreenon="Shop"
+         renderscreen()
+    })
+    document.body.appendChild(NewDiv)
+                 NewDiv=document.createElement("div")
+    NewDiv.innerHTML='<img src="help.png" class="image" style="top:43.75%;left:11%"></img>'+"Help"
+    NewDiv.id="sidebar"
+    NewDiv.className="sidebarentry"
+    NewDiv.style.top="43.5%"
+    document.body.appendChild(NewDiv)
+    }
+}
+
+rendersidebar()
+function dotestchange(){
+    screen++
+    isteacher=1
+    rendersidebar()
+}
+function reloadscreentest(){
+    localStorage.clear
+localStorage.setItem("name",document.getElementById('usernameinput').value);
+localStorage.setItem("level",level);
+localStorage.setItem("xp",xp);
+
+
+    let temp4=0
+
+    let temp2=0
+    if (level===0)
+    {temp2=xp
+            temp4=temp2/parseInt(levelinfo[level].xpreq);
+
+    }
+    else{
+temp2=xp-parseInt(levelinfo[level-1].xpreq)
+    temp4=parseInt(levelinfo[level].xpreq)-parseInt(levelinfo[level-1].xpreq)
+temp4=temp2/temp4
+    }
+    temp4*=10000;
+    temp4=Math.round(temp4)/100
+        if (56+(14-(-0.14*temp4))>=70){
+        coolanim.style.left=56+(14-(-0.14*temp4))+"%"
+            coolanim.style.width=14+(-0.14*temp4)+"%"
+
+        }
+       else {
+coolanim.style.left="70%"
+    coolanim.style.width="14%"
+
+        }
+
+
+    
+answerquestiontest.textContent=temp4+"%"
+    if (xp>=parseInt(levelinfo[level].xpreq)){
+        level+=1
+    levelx.style.visibility="visible";
+blurmasklevel.style.visibility="visible";
+levelpopup.style.visibility="visible";
+    }
+    updateLevelImage()
+    frame+=1
+    thisname="testuser"
+    let hi=document.getElementById('usernameinput').value
+    document.getElementById('username').innerHTML=hi+'<br/>'+levelinfo[level].lname
+if (screen===0){
+    if (buttons===0){
+    let NewDiv=document.createElement("div")
+    NewDiv.textContent="become teacher"
+    NewDiv.id="DivID"
+    NewDiv.className="sidebarentry"
+
+    NewDiv.style.left="16.5%"
+    NewDiv.addEventListener('click',dotestchange)
+    document.body.appendChild(NewDiv)
+    buttons++
+    }
+}
+if (screen===1) {
+    if (buttons===1){
+
+        // Remove only the div with id 'DivId'
+        const divToRemove = document.getElementById('DivID');
+        if (divToRemove) {
+            divToRemove.remove();
+        }
+        buttons-1
+        
+    }
+        
+    }
+
+}
+window.addEventListener("load", function(){
+document.getElementById('usernameinput').value=localStorage.getItem("name");
+level = parseInt(localStorage.getItem("level")) || 0;
+xp = parseInt(localStorage.getItem("xp")) || 0;
+localStorage.clear()
+
+setTimeout(function(){
+
+
+setInterval(reloadscreentest,1)},5)
+})
+function mod(in1,in2){
+    let temp=0
+    temp=Math.floor(in1/in2)*in2
+temp=in1-temp
+    return temp
+}
     </script>
 </body>
 </html>
